@@ -22,17 +22,30 @@ export default class arjs extends Component {
 
                     <a-nft
                         videohandler
+                        // type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/data/dataNFT/pinball'
+                        type='nft' url='https://ar-bdu.herokuapp.com/nft/avatar'
+                        smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
+                    >
+                        {/* <a-video
+                            src="#vid"
+                            rotation="-90 0 0" position="200 100 -150" width="450" height="225"
+                        >
+                        </a-video> */}
+                        <a-image src="https://ar-bdu.herokuapp.com/getcontent/image/avatar.png" rotation="-90 0 0" position="200 100 -150" width="450" height="225"></a-image>
+                    </a-nft>
+
+                    {/* test */}
+                    <a-nft
+                        videohandler
                         type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/data/dataNFT/pinball'
+                        // type='nft' url='https://ar-bdu.herokuapp.com/nft/avatar'
                         smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
                     >
                         <a-video
                             src="#vid"
-                            position='50 150 -100'
-                            width='300'
-                            height='175'
+                            rotation="-90 0 0" position="200 100 -150" width="450" height="225"
                         >
                         </a-video>
-                        {/* <a-image src="http://localhost:4000/getcontent/image/abc.jpg" rotation="-90 0 0" position="200 100 -150" width="450" height="225"></a-image> */}
                     </a-nft>
                     <a-entity camera></a-entity>
                 </a-scene>

@@ -1,0 +1,22 @@
+.group{
+
+}
+.select{
+    /* width: 200px;
+    height: 200px; */
+    display: flex;
+    flex-direction: row;
+}
+.selectPost{
+    margin: 5px;
+    width: 50%;
+}
+.selectImg{
+    margin: 5px;
+    width: 50%;
+}
+.buttonSelect{
+    right: 0px;
+    position: absolute;
+    margin-right: 20px;
+}
