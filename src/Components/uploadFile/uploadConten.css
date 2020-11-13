@@ -1,0 +1,23 @@
+.groubUpload{
+    display: flex;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+.fromupload{
+    margin: auto;
+}
+.fromupload .inputpost{
+    width: 350px;
+}
+.fromupload .btn.btn-info{
+    margin-top: 10px;
+    float: right;
+}
+.fromupload .add.btn.btn-info{
+    margin-top: 10px;
+    margin-right: 5px;
+    float: right;
+}
+.fromupload .textbox.form-control{
+    width: 350px;
+}
