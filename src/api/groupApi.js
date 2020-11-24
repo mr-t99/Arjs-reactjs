@@ -8,6 +8,10 @@ const groupApi = {
     createGroup:(data)=>{
         const url = '/upload/creategroup';
         return axiosClient.post(url, data);
+    },
+    data:(idGroup)=>{
+        const url = `/getcontent/arconten/${idGroup.id}`;
+        return axiosClient.get(url);
     }
 }
 

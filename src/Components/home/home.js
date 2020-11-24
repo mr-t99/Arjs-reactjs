@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import "./home.css"
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Navbar } from 'react-bootstrap';
+// import Ar from "../ar-js/arjs";
+import Upload from "../uploadFile/uploadConten";
 
 class home extends Component {
+
+
     render() {
         return (
-            <div className="home">
-                <div className="menu">
-                    <img src='https://ar-bdu.herokuapp.com/getcontent/image/avatar.png' />
-                    <h1>chào mừng đến với ar.js</h1>
-                    <Breadcrumb>
-                        <BreadcrumbItem><a href="#">Tạo nội dung</a></BreadcrumbItem>
-                        <BreadcrumbItem><a href="#">Nội dung Ar</a></BreadcrumbItem>
-                        <BreadcrumbItem active>Data</BreadcrumbItem>
-                    </Breadcrumb>
-                </div>
+            <div>
+                <img src='https://ar-js-org.github.io/AR.js-Docs/intro-image.gif' />
             </div>
         );
     }

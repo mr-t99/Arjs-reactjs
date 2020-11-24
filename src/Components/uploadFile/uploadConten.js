@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UploadForm from "./formUpload";
 import Group from "./addGroup";
 import "./uploadConten.css"
+const link = process.env.REACT_APP_API_URL;
 
 class uploadConten extends Component {
     constructor() {
@@ -13,7 +14,8 @@ class uploadConten extends Component {
             uploadInfo: {
                 idGroup: null,
                 idImage: null
-            }
+            },
+            option:false
         }
         this.checkGroup = this.checkGroup.bind(this);
         this.checkImg = this.checkImg.bind(this);
@@ -38,13 +40,17 @@ class uploadConten extends Component {
     checkConten(data){
         
     }
+    componentDidMount(){
+        this.setState({
+            ...this.state, option:this.props.type
+        })
+    }
     render() {
-        console.log(this.state);
         return (
             <div className="groubUpload">
-                {this.state.group && <Group callBack={this.checkGroup} />}
-                {this.state.uploadImgae && <UploadForm option='Tải ảnh lên' note="Lưu ý hiện tại hệ thống chỉ hỗ trợ ảnh .png" link="http://localhost:4000/upload/image" callBack={this.checkImg} idGroup={this.state.uploadInfo.idGroup}/>}
-                {this.state.uploadConten && <UploadForm option='Tải video lên' note="Video bạn muốn hiển thị cùng ảnh" link="http://localhost:4000/upload/video" callBack={this.checkConten} idImage={this.state.uploadInfo.idImage}/>}
+                {this.state.group && <Group callBack={this.checkGroup} type={this.state.option} arconten={this.props.arconten} />}
+                {this.state.uploadImgae && <UploadForm option='Tải ảnh lên' note="Lưu ý hiện tại hệ thống chỉ hỗ trợ ảnh .png" link={`${link}/upload/image`} callBack={this.checkImg} idGroup={this.state.uploadInfo.idGroup}/>}
+                {this.state.uploadConten && <UploadForm option='Tải video lên' note="Video bạn muốn hiển thị cùng ảnh" link={`${link}/upload/video`} callBack={this.checkConten} idImage={this.state.uploadInfo.idImage}/>}
             </div>
         );
     }
